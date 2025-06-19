@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore Sikkim, Darjeeling, and North-East India with Anugra Tours. Discover hidden gems, tour packages, and top destinations with expert local guidance.">
+  <title>Home | Anugra Tours</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <!-- POPUP HTML -->
+<div class="popup-overlay" id="popup" style="display: none;">
+  <div class="popup-box">
+    <h2>GET QUOTE & COMPARE</h2>
+    <p>Need Help? Call <strong>+91 97323 181111</strong></p>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="popup-name" placeholder="Your Name" required>
+      <input type="tel" id="popup-phone" placeholder="Enter Phone" required>
+      <button type="submit">SEND ENQUIRY</button>
+    </form>
+    <span class="close-btn" onclick="closePopup()">×</span>
+  </div>
+</div>
+
+<!-- POPUP SCRIPT -->
+<script>
+  // Show popup after 10 seconds
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("popup").style.display = "flex";
+    }, 10000); // 10 seconds
+  });
+
+  // Close popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Send data to WhatsApp
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("popup-name").value.trim();
+    const phone = document.getElementById("popup-phone").value.trim();
+
+    if (name && phone) {
+      const message = `Hello, I would like to enquire:\nName: ${name}\nPhone: ${phone}`;
+      const whatsappNumber = "919734156506"; // WhatsApp number in international format
+
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  }
+</script>
+
+
+
+
+
+  <!-- Topbar (hidden on mobile) -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span><i class="fas fa-blog"></i> Our Blog</span>
+      <span><i class="fas fa-star"></i> Travellers Review</span>
+    </div>
+    <div class="topbar-right">
+      <span><i class="fas fa-phone-alt"></i> +91-97323 181111</span>
+      <span><i class="fas fa-envelope"></i> info@anugratours.com</span>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a class="btn-quote" href="https://wa.me/919734156506?text=Hi%20Anugra%20Tours%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20tour." target="_blank">
+  Get A Quote
+</a>
+
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html">
+    <img src="images/aNUGRHA LOGO.jpg" alt="Anugra Tours Logo" style="height: 40px;" />
+  </a>
+</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+    <nav>
+     <ul class="nav-links">
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="explore-sikkim.html">EXPLORE SIKKIM</a></li>
+  <li>
+    <a href="destinations.html">DESTINATIONS</a>
+    <ul class="dropdown">
+      <li><a href="gangtok.html">GANGTOK</a></li>
+      <li><a href="pelling.html">PELLING</a></li>
+      <li><a href="darjeeling.html">DARJEELING</a></li>
+      <li><a href="nathula.html">NORTH SIKKIM</a></li>
+      <li><a href="namchi-chardham.html">NAMCHI CHARDHAM</a></li>
+      <li><a href="lachung.html">LACHUNG YUMTHANG VALLEY</a></li>
+      <li><a href="tsomgo-lake.html">TSOMGO LAKE BABA MANDIR</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">TOUR PACKAGES</a>
+    <ul class="dropdown">
+      <li><a href="gangtok.html">GANGTOK TOUR PACKAGE</a></li>
+      <li><a href="pelling.html">PELLING TOUR PACKAGE</a></li>
+      <li><a href="darjeeling.html">DARJEELING TOUR PACKAGE</a></li>
+      <li><a href="nathula.html">NORTH SIKKIM TOUR PACKAGE</a></li>
+      <li><a href="namchi.html">NAMCHI CHARDHAM TOUR PACKAGE</a></li>
+      <li><a href="yumthang.html">LACHUNG YUMTHANG VALLEY TOUR PACKAGE</a></li>
+      <li><a href="tsomgo-lake.html">TSOMGO LAKE BABA MANDIR TOUR PACKAGE</a></li>
+    </ul>
+  </li>
+  <li><a href="hotels.html">HOTELS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+</ul>
+
+    </nav>
+  </header>
+
+
+<section class="hero-slider">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('images/darjeeling2.jpg');"></div>
+    <div class="slide" style="background-image: url('images/yumthang1.jpg');"></div>
+    <div class="slide" style="background-image: url('images/zero_point1.jpg');"></div>
+     <div class="slide" style="background-image: url('images/zero_point.jpg');"></div>
+      <div class="slide" style="background-image: url('images/rumtek_monastery.jpg');"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Welcome to <span>Anugra Tours & Travels</span></h1>
+    <p>Your gateway to incredible India.</p>
+    <a href="destinations.html" class="btn-primary">Explore Tours</a>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 4000); // every 4 seconds
+  });
+</script>
+
+
+
+<center>
+  <h1>Discover the Hidden Gems and Popular Marvels of Sikkim – A Paradise in the Himalayas</h1>
+  <p>Anurag Tour and Travel located in India is 22nd state which is surrounded by three international borders. It is very rich in natural diversity like flora and funna where one will come across various types on endangered species of bird,butterfly and animal. It is also internationally known for Buddhist pilgrimage.The world famous statue of Lord Padmasambhava and Lord Buddha Park is located at South District of Sikkim.</p></center>
+
+<section class="tours-section">
+  <h2>Popular Tour Packages</h2>
+  <div class="tour-carousel">
+
+    <!-- North Sikkim -->
+    <div class="tour-card">
+      <img src="images/yumthang2.jpg" alt="Gurudongmar Lake">
+      <div class="tour-info">
+        <h3>North Sikkim Tour</h3>
+        <p>Gurudongmar Lake, Yumthang Valley, Zero Point, Lachen, Lachung & Chungthang – snow-covered peaks and surreal Himalayan views.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20North%20Sikkim%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- East Sikkim (Gangtok) -->
+    <div class="tour-card">
+      <img src="images/gangtok.jpg" alt="Gangtok City View">
+      <div class="tour-info">
+        <h3>Gangtok & East Sikkim Tour</h3>
+        <p>Tsomgo Lake, Baba Mandir, MG Marg, Hanuman Tok, Rumtek Monastery & Ban Jhakri Falls – a scenic blend of nature & culture.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20Gangtok%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- South Sikkim -->
+    <div class="tour-card">
+      <img src="images/namchi2.jpg" alt="Namchi Char Dham">
+      <div class="tour-info">
+        <h3>South Sikkim Tour</h3>
+        <p>Visit Char Dham, Samdruptse, Buddha Park in Ravangla, Tarey Bhir & Temi Tea Garden – tranquil hills and spiritual serenity.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20South%20Sikkim%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- West Sikkim -->
+    <div class="tour-card">
+      <img src="images/pelling.jpg" alt="Pelling Skywalk">
+      <div class="tour-info">
+        <h3>West Sikkim Tour</h3>
+        <p>Explore Pelling Skywalk, Khecheopalri Lake, Rimbi Waterfall, Pemayangtse Monastery & Yuksom – rich in history and vistas.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20West%20Sikkim%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- Darjeeling -->
+    <div class="tour-card">
+      <img src="images/darjeeling2.jpg" alt="Darjeeling">
+      <div class="tour-info">
+        <h3>Darjeeling Tour</h3>
+        <p>Visit Tiger Hill, Batasia Loop, Ghoom Monastery, Tea Gardens & Himalayan Zoo – colonial charm meets mountain magic.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20Darjeeling%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- Kalimpong -->
+    <div class="tour-card">
+      <img src="images/kalimpong.jpg" alt="Kalimpong Hill View">
+      <div class="tour-info">
+        <h3>Kalimpong Tour</h3>
+        <p>Explore Delo Hill, Pine View Nursery, Zang Dhok Palri Monastery & colonial bungalows – a quiet Himalayan escape.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20Kalimpong%20Tour%20Package." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- Kaziranga -->
+    <div class="tour-card">
+      <img src="images/kaziranga.png" alt="Kaziranga Rhino Safari">
+      <div class="tour-info">
+        <h3>Kaziranga Wildlife Safari</h3>
+        <p>Go on a thrilling jungle safari at Kaziranga National Park – home to the rare one-horned rhinoceros and Bengal tigers.</p>
+        <a href="https://wa.me/919734156506?text=I'm%20interested%20in%20Kaziranga%20Wildlife%20Safari." class="view-btn" target="_blank">Send Enquiry</a>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="https://wa.me/919734156506?text=Please%20send%20me%20your%20latest%20tour%20packages." class="see-all" target="_blank">SEE ALL PACKAGES ⟶</a>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo-contact">
+      <h2>Anugra Tours</h2>
+      <ul class="contact-info">
+        <li>📞 +91-97323 181111</li>
+        <li>📱 +91 97323 181111</li>
+        <li>📱 +91 97323 181111</li>
+        <li>📱 +91 97323 181111</li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>■ COMPANY</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li>Careers</li>
+          <li>Travellers Review</li>
+          <li>Privacy Policy</li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>■ LINKS</h4>
+        <ul>
+          <li>Tourism Info</a></li>
+          <li>Gallery</a></li>
+          <li>Video Gallery</a></li>
+          <li>Places of Interests</a></li>
+          <li>Book A Trip</li>
+          <li>Post A Review</li>
+          <li>Become a Partner</li>
+        </ul>
+      </div>
+      <div>
+        <h4>■ EXPLORE SIKKIM</h4>
+        <ul>
+          <li><a href="gangtok.html">Gangtok</a></li>
+          <li><a href="darjeeling.html">Darjeeling</a></li>
+          <li><a href="pelling.html">Pelling</a></li>
+          <li><a href="namchi-chardham.html">Namchi Chardham</a></li>
+          <li><a href="yumthang.html">North Sikkim</a></li>
+          <li><a href="lachung.html">Lachung Yumthang</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>■ TOUR PACKAGES</h4>
+        <ul>
+          <li><a href="explore-sikkim.html">Sikkim Tour Package</a></li>
+          <li><a href="darjeeling.html">Sikkim Darjeeling Tours</a></li>
+          <li>Student Tours</a></li>
+          <li>Honeymoon Tours</a></li>
+          <li>Bhutan Packages</li>
+          <li>Buddhist Tours</li>
+          <li>Group Tours</li>
+          <li>Offbeat Tours</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Government Registration Section -->
+    <div class="govt-registration" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ccc;">
+      <img src="images/govt-of-sikkim-logo.png" alt="Government of Sikkim Logo" style="height: 60px;" />
+      <p style="margin-top: 10px; font-weight: 600; color: #ffffff;">Registered with Government of Sikkim</p>
+    </div>
+
+    <!-- Credit Section -->
+    <div class="footer-credit" style="text-align: center; padding: 15px 0; font-size: 14px; color: #666;">
+      © 2025 Anugra Tours. All rights reserved. <br>
+      Designed & Developed by <strong><a href="https://abishekkhanal.github.io/" style="color: rgb(30, 210, 30); text-decoration: none;">Abishek Khanal</a></strong>
+    </div>
+  </div>
+</footer>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000;">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>
